@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A Dashboard for Covid API Data">
+    <title>Covid - Dashboard</title>
+    <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/colors/default.css" id="theme" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+</head>
+
+<body class="fix-header">
+
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-static-top m-b-0">
+            <div class="navbar-header">
+                <div class="top-left-part">
+                    <!-- Logo -->
+                    <a class="logo" href="dashboard.html">
+                     
+                        <span class="hidden-xs">
+                            <span style="    font-size: 18px;
+                            color: black;
+                            text-align: center;">Covid19 Dashboard</span>
+                        </span> 
+                    </a>
+                </div>
+               
+            </div>
+        
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="container-fluid">
+               
+                <div id="totalCasesWorldWide" class="row">
+                    <div class="col-md-12 col-lg-12 col-sm-12">
+                        <div class="white-box">
+
+                            <h3 class="box-title text-center">Total Coronavirus Cases Worldwide</h3>
+                            <span id="totalCases" class="text-success text-center" style="display: block;"></span>
+                            
+                        </div>
+
+                        </div>
+
+                </div>
+      
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6 col-xs-12">
+                        <div class="white-box analytics-info">
+                            <h3 class="box-title">Recovered Coronavirus Patients</h3>
+                            <ul class="list-inline two-part">
+                                <li class="text-left"><i class="ti-arrow-up text-success"></i> <span id="totalRecovered" class="text-success"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 col-xs-12">
+                        <div class="white-box analytics-info">
+                            <h3 class="box-title">Critical Coronavirus Cases</h3>
+                            <ul class="list-inline two-part">
+                                <li class="text-left"><i class="ti-arrow-up text-purple"></i> <span id="totalCritical" class="text-purple"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 col-xs-12">
+                        <div class="white-box analytics-info">
+                            <h3 class="box-title">Total Coronavirus Deaths</h3>
+                            <ul class="list-inline two-part">
+                                <li class="text-left"><i class="ti-arrow-up text-info"></i> <span id="totalDeaths" class="text-info"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- FUll Table Data-->
+                 <div class="row">
+                    <div class="col-md-12 col-lg-12 col-sm-12">
+                        <div class="white-box">
+
+                            <h3 class="box-title">Top 5 Countrys Based on Deaths</h3>
+
+                            <div id="showData"></div>
+
+                        </div>
+
+                        </div>
+
+                </div>
+
+                <!-- Graph Death Rate Data-->
+                <div class="row">
+                    <div class="col-lg-6 col-sm-6 col-xs-12">
+                        <div class="white-box">
+
+                            <h3 class="box-title">Piechart - Highest Deathrate</h3>
+
+                            <canvas id="pieChart"></canvas>
+
+                        </div>
+
+                        </div>
+
+                    <!-- Graph Recoveries Rate Data-->
+                    <div class="col-lg-6 col-sm-6 col-xs-12">
+                        <div class="white-box">
+
+                            <h3 class="box-title">Piechart - Recoveries</h3>
+
+                            <canvas id="pieChart2"></canvas>
+
+                        </div>
+
+                        </div>
+                </div>
+
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+    </div>
+
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/custom.min.js"></script>
+    <script src="js/dashboard1.js"></script>
+
+</body>
+
+</html>
